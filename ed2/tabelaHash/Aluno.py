@@ -5,7 +5,7 @@ class Aluno:
         self.idade = idade
 
     def __str__(self):
-        return f"Matricula: " + self.matricula + "Nome: " + self.nome + "Idade: " + self.idade;
+        return f"Matrícula: {self.matricula} | Nome: {self.nome} | Idade: {self.idade}"
 
 class No:
     def __init__(self, aluno: Aluno):
