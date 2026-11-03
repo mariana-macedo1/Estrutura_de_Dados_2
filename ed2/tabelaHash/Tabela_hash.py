@@ -50,4 +50,22 @@ class TabelaHash:
             atual = atual.proximo
         print(f"Erro: Aluno com matrícula {matricula} não encontrado!")
         return False
+
+    def exibir(self):
+        print("\n" + "="*70)
+        print("ESTADO ATUAL DA TABELA HASH")
+        print("="*70)
+        for indice in range(self.M):
+            print(f"\nPosição {indice}: ", end="")
+            atual = self.tabela[indice]
+            if atual is None:
+                print("NULL")
+            else:
+                while atual is not None:
+                    print(f"[{atual.aluno.matricula}]", end="")
+                    if atual.proximo is not None:
+                        print(" -> ", end="")
+                    atual = atual.proximo
+                print(" -> NULL")
+        print("\n" + "="*70 + "\n")
     
