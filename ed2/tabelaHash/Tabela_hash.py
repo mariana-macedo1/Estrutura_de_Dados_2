@@ -33,3 +33,21 @@ class TabelaHash:
                 atual = atual.proximo
             atual.proximo = novo_no
         return True
+    
+    def remover(self, matricula):
+        indice = self.funcao_hash(matricula)
+        atual = self.tabela[indice]
+        anterior = None
+        while atual is not None:
+            if atual.aluno.matricula == matricula:
+                if anterior is None:
+                    self.tabela[indice] = atual.proximo
+                else:
+                    anterior.proximo = atual.proximo
+                print(f"Aluno com matrícula {matricula} removido com sucesso!")
+                return True
+            anterior = atual
+            atual = atual.proximo
+        print(f"Erro: Aluno com matrícula {matricula} não encontrado!")
+        return False
+    
