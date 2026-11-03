@@ -22,3 +22,7 @@ def menu():
             break
         else:
             print("opção inválida! tente novamente.")
+
+
+    if __name__ == "__main__":
+        menu()
