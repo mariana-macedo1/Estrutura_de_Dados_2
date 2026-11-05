@@ -9,11 +9,11 @@ def menu():
         try:
 
             print("======= Menu =======")
-            print("1. Adicionar aluno")
-            print("2. Buscar aluno")
-            print("3. Remover aluno")
-            print("4. Tabela Hash")
-            print("5. Fechar")
+            print("1. Inserir novo Aluno")
+            print("2. Buscar Aluno")
+            print("3. Remover Aluno")
+            print("4. Exibir Tabela Hash")
+            print("5. Encerrar Sistema")
 
             opcao = input("Escolha uma opção: ")
 
